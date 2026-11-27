@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Білет №15 — Збереження даних у localStorage</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <main class="wrap">
+    <h1>Білет №15 — Збереження даних у localStorage</h1>
+    <p class="lead">
+      Об'єкт налаштувань зберігається у <code>localStorage</code> під ключем
+      <code>examSettings</code>, читається назад, а за відсутності ключа
+      використовуються значення за замовчуванням.
+    </p>
+
+    <div class="actions">
+      <button id="btn-save" class="btn">Зберегти налаштування</button>
+      <button id="btn-read" class="btn">Прочитати (відновити)</button>
+      <button id="btn-clear" class="btn btn-ghost">Очистити ключ</button>
+    </div>
+
+    <section class="result">
+      <h2>Відновлені налаштування</h2>
+      <p id="output" class="output">—</p>
+    </section>
+  </main>
+
+  <script src="js/main.js" defer></script>
+</body>
+</html>

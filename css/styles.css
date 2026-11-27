@@ -1,0 +1,89 @@
+:root {
+  --bg: #ffffff;
+  --fg: #1b1e22;
+  --muted: #6b7075;
+  --primary: #2f6fed;
+  --surface: #f4f6fb;
+  --border: #d9dde3;
+}
+
+/* Темна тема вмикається через data-theme="dark" (значення з localStorage) */
+body[data-theme="dark"] {
+  --bg: #16181d;
+  --fg: #eef0f3;
+  --muted: #9aa0a8;
+  --primary: #6ea0ff;
+  --surface: #20242b;
+  --border: #333942;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  font-family: "Segoe UI", system-ui, Arial, sans-serif;
+  background: var(--bg);
+  color: var(--fg);
+  line-height: 1.55;
+  transition: background 0.2s, color 0.2s;
+}
+
+.wrap {
+  max-width: 680px;
+  margin: 0 auto;
+  padding: 40px 20px;
+}
+
+h1 { font-size: 1.6rem; margin: 0 0 12px; }
+h2 { font-size: 1.1rem; margin: 0 0 8px; }
+
+.lead { color: var(--muted); margin: 0 0 24px; }
+
+code {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 5px;
+  padding: 1px 6px;
+  font-family: "Consolas", monospace;
+  font-size: 0.95em;
+}
+
+.actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-bottom: 28px;
+}
+
+.btn {
+  font: inherit;
+  font-weight: 600;
+  padding: 10px 18px;
+  border: 2px solid var(--primary);
+  border-radius: 8px;
+  background: var(--primary);
+  color: #fff;
+  cursor: pointer;
+  transition: opacity 0.15s;
+}
+.btn:hover { opacity: 0.9; }
+.btn:focus-visible { outline: 3px solid var(--primary); outline-offset: 2px; }
+
+.btn-ghost {
+  background: transparent;
+  color: var(--primary);
+}
+
+.result {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 20px;
+}
+
+.output {
+  font-family: "Consolas", monospace;
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin: 0;
+}
